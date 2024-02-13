@@ -1,5 +1,5 @@
 import  express  from 'express';
-import {test, register, login, update, deleteU} from './animals.controller.js';
+import {test, register, update, deleteu} from './animals.controller.js';
 
 const api = express.Router(); 
 
@@ -8,5 +8,7 @@ const api = express.Router();
 
 api.get('./test', test)
 api.put('/update/:id', update)
+api.post('/register', register)
+api.delete('/deleteu/id', deleteu)
 
 export default api

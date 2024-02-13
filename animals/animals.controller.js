@@ -17,7 +17,6 @@ export const register = async(req, res)=>{
     try{
         let data = req.body
         data.password = await encrypt(data.password)
-        data.role = 'ADMIN'
         let user = new animals(data)
         await user.save()
         return res.send({message: `Registered successfully, can be logged with username ${user.username}`})

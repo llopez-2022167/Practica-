@@ -14,13 +14,6 @@ const animalSchema = new mongoose.Schema({
     },
     age: { 
         type: Number,
-        required: true,
-        min: 0 
-    },
-    role: {
-        type: String,
-        uppercase: true,
-        enum: ['Mascota'],
         required: true
     }
 });
